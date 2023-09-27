@@ -20,8 +20,8 @@ public class Pig {
 
 	public boolean addCoin(Coin coin) {
 		if (broken || (getVolume() + coin.getVolume()) >= volumeMax) {
-			if(getVolume() + coin.getVolume() >= volumeMax) Porquinho.write("fail: the pig is full");
-			else Porquinho.write("fail: the pig is broken");
+			if(getVolume() + coin.getVolume() >= volumeMax) Cofre.write("fail: the pig is full");
+			else Cofre.write("fail: the pig is broken");
 			
 			return false;
 		} else {
@@ -32,8 +32,8 @@ public class Pig {
 
 	public boolean addItem(Item item) {
 		if (broken || (getVolume() + item.getVolume()) >= volumeMax) {
-			if(getVolume() + item.getVolume() >= volumeMax) Porquinho.write("fail: the pig is full");
-			else Porquinho.write("fail: the pig is broken");
+			if(getVolume() + item.getVolume() >= volumeMax) Cofre.write("fail: the pig is full");
+			else Cofre.write("fail: the pig is broken");
 			
 			return false;
 		} else {
@@ -55,11 +55,11 @@ public class Pig {
 		if (broken) {
 			//	[0.10:1, 0.50:3]
 			//	[]
-			Porquinho.write(coins.toString());
+			Cofre.write(coins.toString());
 			coins = new ArrayList<>();
 		} else {
-			Porquinho.write("fail: you must break the pig first");
-			Porquinho.write("[]");
+			Cofre.write("fail: you must break the pig first");
+			Cofre.write("[]");
 		}
 	}
 
@@ -67,11 +67,11 @@ public class Pig {
 		if (broken) {
 			//	[ouro:2, pirulito:3]
 			//	[]
-			Porquinho.write(itens.toString());
+			Cofre.write(itens.toString());
 			itens = new ArrayList<>();
 		} else {
-			Porquinho.write("fail: you must break the pig first");
-			Porquinho.write("[]");
+			Cofre.write("fail: you must break the pig first");
+			Cofre.write("[]");
 		}
 	}
 

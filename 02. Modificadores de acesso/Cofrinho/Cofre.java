@@ -2,7 +2,7 @@ package Cofrinho;
 
 import java.util.*;
 
-public class Porquinho {
+public class Cofre {
 	public static void main(String[] args) {
 		Pig pig = new Pig();
 
