@@ -1,4 +1,4 @@
-package Cofrinho;
+package Porquinho;
 
 public class Item {
 	private String label;

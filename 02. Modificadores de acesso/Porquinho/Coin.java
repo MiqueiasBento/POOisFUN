@@ -1,4 +1,4 @@
-package Cofrinho;
+package Porquinho;
 
 public class Coin {
     private double value;

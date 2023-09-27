@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import java.util.*;
-
 class Time {
 	public int hour = 0;
 	public int minute = 0;
