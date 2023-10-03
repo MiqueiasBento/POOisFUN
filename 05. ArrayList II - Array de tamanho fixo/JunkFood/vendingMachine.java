@@ -84,7 +84,7 @@ public class vendingMachine {
 		String ss = "";
 		
 		ss += "saldo: " + String.format("%.2f", getCash()) + "\n";
-		for(int i = 0; i < slots.size(); i++) {
+		for(int i = 0; i < this.capacity; i++) {
 			ss  += i + " [" + slots.get(i) + "]\n";
 		}
 		ss = ss.substring(0, ss.length() -1);

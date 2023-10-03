@@ -1,43 +1,38 @@
-import java.util.*;
+package contato;
 
-public class createAccount {
-	public static void main(String[] args) {
-		Account conta = new Account(0);
+import java.util.Scanner;
+
+public class createContact {
+	public static void main(String[] arg) {
+		Contact contato = new Contact("");
 		
 		while(true) {
 			String line = input();
 			write("$" + line);
-			args = line.split(" ");
+			String[] args = line.split(" ");
 			
 			switch(args[0]) {
 				case "end":
 					return;
 				case "init":
-					conta = new Account(number(args[1]));
+					contato = new Contact(args[1]);
 					break;
-				case "deposit":
-					conta.deposit(number(args[1]));
+				case "add":
+					contato.addFone(new Fone(args[1], args[2]));
+					break;
+				case "rm":
+					contato.removeFone(number(args[1]));
+					break;
+				case "tfav":
+					contato.toogleFavorited();
 					break;
 				case "show":
-					write("" + conta);
-					break;
-				case "withdraw":
-					
-					break;
-				case "fee":
-					
-					break;
-				case "extract":
-					
-					break;
-				case "reverse":
-					
+					write("" + contato);
 					break;
 				default:
 					write("fail: comando invalido");
 			}
 		}
-
 	}
 	public static Scanner sc = new Scanner(System.in);
 	
