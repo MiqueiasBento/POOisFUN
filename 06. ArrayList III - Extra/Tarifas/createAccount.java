@@ -2,7 +2,7 @@ import java.util.*;
 
 public class createAccount {
 	public static void main(String[] args) {
-		Account conta;
+		Account conta = new Account(0);
 		
 		while(true) {
 			String line = input();
@@ -19,7 +19,7 @@ public class createAccount {
 					conta.deposit(number(args[1]));
 					break;
 				case "show":
-					write("" + show);
+					write("" + conta);
 					break;
 				case "withdraw":
 					

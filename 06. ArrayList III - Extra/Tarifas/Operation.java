@@ -1,10 +1,9 @@
-package mod06_Tarifas;
-
 public class Operation {
 	private int index;
 	private Label label;
 	private int value;
 	private int balance;
+	
 	
 	public Operation(int index, Label label, int value, int balance) {
 		this.index = index;
@@ -12,7 +11,6 @@ public class Operation {
 		this.value = value;
 		this.balance = balance;
 	}
-
 	public int getIndex() {
 		return index;
 	}

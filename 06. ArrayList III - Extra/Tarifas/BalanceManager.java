@@ -1,5 +1,3 @@
-package mod06_Tarifas;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +20,10 @@ public class BalanceManager {
 	
 	public int getBalance() {
 		return balance;
+	}
+	
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
 	
 	public List<Operation> getExtract(int qtdOp) {
