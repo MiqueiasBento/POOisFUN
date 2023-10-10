@@ -38,7 +38,16 @@ public class Operation {
 		this.label = label;
 	}
 	
+	public int getValue() {
+		return this.value;
+	}
+	
+	public void setValue(int value) {
+		this.value = value;
+	}
+	
 	public String toString() {
-		return "";
+		// id:0 give:maria 300
+		return "id:" + getId() + " " + label.toString(label) + ":" + getName() + " " + getValue();
 	}
 }

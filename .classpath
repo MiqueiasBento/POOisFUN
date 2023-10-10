@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="01. Classe"/>
+	<classpathentry kind="src" path="02. Modificadores de acesso"/>
+	<classpathentry kind="src" path="03. Agregação simples"/>
+	<classpathentry excluding="Budega/" kind="src" path="04. ArrayList I - Arrays e Listas Ligadas"/>
+	<classpathentry kind="src" path="04. ArrayList I - Arrays e Listas Ligadas/Budega"/>
+	<classpathentry kind="src" path="05. ArrayList II - Array de tamanho fixo"/>
+	<classpathentry kind="src" path="06. ArrayList III - Extra"/>
+	<classpathentry kind="src" path="08. Excessoes"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

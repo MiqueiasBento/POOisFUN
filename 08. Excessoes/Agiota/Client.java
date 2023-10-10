@@ -1,8 +1,6 @@
 package Agiota;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Client {
 	private String name;
@@ -24,15 +22,31 @@ public class Client {
 		return name;
 	}
 	
-	public List getOperations() {
-		ArrayList<Operation> lista = new ArrayList<>();
-		
-		for(Operation operation : operations) {
-			lista.add(operation);
-		}
-		
-		return lista;
+	public void addOp(Operation op) {
+		operations.add(op);
 	}
 	
+	public void getOperations() {
+		for(Operation operation : operations) {
+			System.out.println(operation);
+		}
+	}
 	
+	public int getBalance() {
+		int out = 0;
+		for(Operation op : operations) {
+			if(op.getLabel() == Label.GIVE || op.getLabel() == Label.PLUS) {
+				out += op.getValue();
+			} else if(op.getLabel() == Label.TAKE) {
+				out -= op.getValue();
+			}
+		}
+		
+		return out;
+	}
+	
+	@ Override
+	public String toString() {
+		return getName() + " " + getBalance() + "/" + getLimite();
+	}
 }
