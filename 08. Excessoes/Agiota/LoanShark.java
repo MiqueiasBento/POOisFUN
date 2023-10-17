@@ -2,6 +2,13 @@ package Agiota;
 
 import java.util.*;
 
+//Excessoes a serem usadas
+class ClientNullException extends Exception {
+	public String getMessage() {
+		return "fail: cliente nao existe";
+	}
+}
+
 public class LoanShark {
 	private LinkedList<Client> aliveList;
 	private LinkedList<Client> deathList;
@@ -45,14 +52,10 @@ public class LoanShark {
 		this.deathOper = new LinkedList<>();
 	}
 
-	public void getClient(String name) {
-		if (seachClient(name) != -1) {
-			var id = aliveList.get(seachClient(name));
-			System.out.println(id);
-			id.getOperations();
-		} else {
-			System.out.println("fail: cliente na existe");
-		}
+	public Client getClient(String name) throws ClientNullException {
+		if (seachClient(name) == -1)
+	    	throw new ClientNullException();
+		return aliveList.get(seachClient(name));
 	}
 
 	public void addClient(String name, int limite) {

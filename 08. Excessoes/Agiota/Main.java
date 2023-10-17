@@ -8,39 +8,45 @@ public class Main {
 
 		while (true) {
 			String line = input();
-//			write("$" + line);
+			write("$" + line);
 			args = line.split(" ");
-
-			switch (args[0]) {
-			case "end":
-				return;
-			case "init":
-				agiota = new LoanShark();
-				break;
-			case "show":
-				print(agiota);
-				break;
-			case "showCli":
-				agiota.getClient(args[1]);
-				break;
-			case "addCli":
-			case "add":
-				agiota.addClient(args[1], (int) number(args[2]));
-				break;
-			case "give":
-				agiota.give(args[1], (int) number(args[2]));
-				break;
-			case "take":
-				agiota.take(args[1], (int) number(args[2]));
-				break;
-			case "kill":
-				agiota.kill(args[1]);
-				break;
-			case "plus":
-				agiota.plus();
-				break;
-			default:
-				println("fail: comando invalido");
+			
+			try {
+				switch (args[0]) {
+				case "end":
+					return;
+				case "init":
+					agiota = new LoanShark();
+					break;
+				case "show":
+					print(agiota);
+					break;
+				case "showCli":
+					var client = agiota.getClient(args[0]);
+					write("" + client);
+					client.getOperations();
+					break;
+				case "addCli":
+				case "add":
+					agiota.addClient(args[1], (int) number(args[2]));
+					break;
+				case "give":
+					agiota.give(args[1], (int) number(args[2]));
+					break;
+				case "take":
+					agiota.take(args[1], (int) number(args[2]));
+					break;
+				case "kill":
+					agiota.kill(args[1]);
+					break;
+				case "plus":
+					agiota.plus();
+					break;
+				default:
+					println("fail: comando invalido");
+				}
+			} catch (ClientNullException e){
+				write("" + e.getMessage());
 			}
 
 		}
