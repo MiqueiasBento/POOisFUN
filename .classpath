@@ -10,6 +10,6 @@
 	<classpathentry kind="src" path="06. ArrayList III - Extra"/>
 	<classpathentry kind="src" path="08. Excessoes"/>
 	<classpathentry kind="src" path="10. Heranca I"/>
-	<classpathentry kind="src" path="11. Maps"/>
+	<classpathentry kind="src" path="09. Maps"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
