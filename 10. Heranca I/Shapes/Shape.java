@@ -20,10 +20,10 @@ public abstract class Shape {
 	public abstract double getPerimeter();
 	
 	public String getInfo() {
-		DecimalFormat d = new DecimalFormat("#.##");
+		DecimalFormat d = new DecimalFormat("0.00");
 		// Circ: A=78.54 P=31.42
 		// Rect: A=4.00 P=8.00
-		return this.name + " A=" + d.format(getArea()) + " P=" + d.format(getPerimeter());
+		return this.name + ": A=" + d.format(getArea()) + " P=" + d.format(getPerimeter());
 	}
 	
 	@ Override
