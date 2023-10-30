@@ -1,9 +1,9 @@
 package tarifas;
 
 public enum Label {
-	deposit,
-	fee,
-	opening,
-	reverse,
-	withdraw;
+	DEPOSIT,
+	FEE,
+	OPENING,
+	REVERSE,
+	WITHDRAW;
 }

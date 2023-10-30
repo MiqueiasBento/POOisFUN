@@ -28,4 +28,9 @@ public class Operation {
 	public int getBalance() {
 		return balance;
 	}
+	
+	@ Override
+	public String toString() {
+		return this.index + ": " + this.label + ": " + this.value + ": " + this.balance;
+	}
 }

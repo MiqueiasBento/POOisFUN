@@ -9,6 +9,9 @@ public class BalanceManager {
 	private int nextId;
 	
 	public BalanceManager() {
+		balance = 0;
+		nextId = 0;
+		extract = new ArrayList<>();
 	}
 	
 	public void addOperation(Label label, int value) {
@@ -46,6 +49,6 @@ public class BalanceManager {
 	
 	@ Override
 	public String toString() {
-		return "";
+		return " ";
 	}
 }
