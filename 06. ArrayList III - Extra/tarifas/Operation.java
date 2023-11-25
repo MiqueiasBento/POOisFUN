@@ -12,7 +12,8 @@ public class Operation {
 		this.value = value;
 		this.balance = balance;
 	}
-
+	
+	// Getters e Setters
 	public int getIndex() {
 		return index;
 	}
@@ -31,6 +32,7 @@ public class Operation {
 	
 	@ Override
 	public String toString() {
-		return this.index + ": " + this.label + ": " + this.value + ": " + this.balance;
+		// ·0:··opening:····0:····0
+		return " " + this.index + ":  " + this.label + ":  " + this.value + ":  " + this.balance;
 	}
 }

@@ -14,11 +14,16 @@ public class BalanceManager {
 		extract = new ArrayList<>();
 	}
 	
+	// adiciona value ao balance
+	// crie operação e adicione ao vetor de operações
+	// incrementa o nextId
 	public void addOperation(Label label, int value) {
 		setBalance(getBalance() + value);
-		extract.add(new Operation(nextId(), label, value, this.balance));
+		extract.add(new Operation(nextId++, label, value, this.balance));
 	}
 	
+	// retorna uma operação com label ERROR caso contrário
+	// retorna a operação caso o índice seja válido
 	public int getBalance() {
 		return balance;
 	}
@@ -27,12 +32,8 @@ public class BalanceManager {
 		this.balance = value;
 	}
 	
-	public int nextId() {
-		int value = nextId;
-		nextId++;
-		return value;
-	}
-	
+	// se qtdOp for 0, retorne todas as operações
+	// se qtdOp for positivo, retorne as últimas qtdOp operações
 	public List<Operation> getExtract(int qtdOp) {
 		List<Operation> result = new ArrayList<>();
 			
@@ -49,6 +50,6 @@ public class BalanceManager {
 	
 	@ Override
 	public String toString() {
-		return " ";
+		return "olaaaaa";
 	}
 }

@@ -10,14 +10,15 @@ public class Main {
 			write("$" + line);
 			args = line.split(" ");
 			
-			switch(args[0]) {
+			try {
+				switch(args[0]) {
 				case "end":
 					return;
 				case "init":
 					account = new Account(number(args[1]));
 					break;
 				case "show":
-					write("" + account);
+					write(account);
 					break;
 				case "deposit":
 					account.deposit(number(args[1]));
@@ -36,11 +37,15 @@ public class Main {
 					break;
 				default:
 					write("fail: comando invalido");
+				}
+			} catch(Exception e) {
+				write(e.getMessage());
 			}
+			
 		}
 	}
 	public static Scanner sc = new Scanner(System.in);
 	public static String input() 			{ return sc.nextLine(); }
-	public static void write(String str)	{ System.out.println(str); }
+	public static void write(Object str)	{ System.out.println(str); }
 	public static int number(String str) 	{ return Integer.parseInt(str); }
 }
