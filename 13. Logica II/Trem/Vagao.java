@@ -11,7 +11,7 @@ public class Vagao {
 		this.cadeiras = new ArrayList<>(Collections.nCopies(capacidade, null));
 	}
 	
-	public boolean embarcar(Passageiro pass) throws Exception{
+	public boolean embarcar(Passageiro pass){
 		for(int i = 0; i < this.capacidade; i++) {
 			if(cadeiras.get(i) == null) {
 				cadeiras.set(i, pass);

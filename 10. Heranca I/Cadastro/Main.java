@@ -2,7 +2,7 @@ package Cadastro;
 
 import java.util.*;
 
-public class Solver {
+public class Main {
     public static void main(String[] arg) {
         Agency agency = new Agency();
 

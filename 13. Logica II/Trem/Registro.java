@@ -1,6 +1,7 @@
 package Trem;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class Registro {
@@ -25,12 +26,8 @@ public class Registro {
 	}
 	
 	public String getCadastro() {
-		cadastro.sort(new Comparator<Passageiro>() {
-			@Override
-			public int compare(Passageiro pass1, Passageiro pass2) {
-				return pass1.getId().compareTo(pass2.getId());
-			}
-		});
+		// Compara os valores do ArrayList e organiza a partir do getId
+		Collections.sort(this.cadastro, Comparator.comparing(Passageiro :: getId));
 
 		String out = "";
 
