@@ -14,7 +14,7 @@ abstract class Funcionario {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setBonus(int bonus) {
@@ -22,18 +22,18 @@ abstract class Funcionario {
     }
 
     public void addDiaria() throws Exception {
-        if(maxDiarias == 0){
+        if(this.maxDiarias == 0){
             throw new Exception("fail: terc nao pode receber diaria");
         }
         
-        if (diarias < maxDiarias) {
-            diarias++;
+        if (this.diarias < this.maxDiarias) {
+            this.diarias++;
         } else {
             throw new Exception("fail: limite de diarias atingido");
         }
     }
 
     public int getSalario() {
-        return bonus + diarias * 100;
+        return this.bonus + this.diarias * 100;
     }
 }

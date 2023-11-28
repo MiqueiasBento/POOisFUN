@@ -7,25 +7,25 @@ public class Terceirizado extends Funcionario {
     public Terceirizado(String nome, int horas, String isSalubre) {
         super(nome);
         this.horas = horas;
-        this.isSalubre = Boolean.parseBoolean(isSalubre);
+        this.isSalubre = (isSalubre.equals("sim") ? true : false);
         this.maxDiarias = 0;
     }
 
     public int getHoras() {
-        return horas;
+        return this.horas;
     }
 
     public String getIsSalubre() {
-        return isSalubre ? "nao" : "sim";
+        return this.isSalubre ? "sim" : "nao";
     }
 
     @Override
     public int getSalario() {
-        return 4 * horas + ((isSalubre) ? 0 : 500) + super.getSalario();
+        return 4 * this.horas + ((this.isSalubre) ? 0 : 500) + super.getSalario();
     }
 
     @Override
     public String toString(){
-        return "ter:" + getNome() + ":" + getHoras() + ":" + getIsSalubre() + ":" + getSalario();
+        return "ter:" + this.getNome() + ":" + this.getHoras() + ":" + this.getIsSalubre() + ":" + getSalario();
     }
 }
