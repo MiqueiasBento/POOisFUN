@@ -27,8 +27,17 @@ public class Account {
 	
 	// se o índice for válido e representar uma operação de tarifa
 	// adicione o mesmo valor tarifado, mas com label de reverse(extorno)
-	public void reverse(int index) {
+	public void reverse(int index) throws Exception{
+		List<Operation> op = this.balanceManager.getExtract(index);
 		
+		if(index < 0 || index > op.size()) {
+			throw new Exception("fail: index " + index + " invalid");
+		}
+		if(op.get(index).getLabel() != Label.FEE) {
+			throw new Exception("fail: index " + index + " is not a fee");
+		}
+		
+		this.balanceManager.addOperation(Label.REVERSE, (op.get(index).getValue() * -1));
 	}
 	
 	// só realiza a operação se houver dinheiro suficiente na conta
@@ -53,8 +62,9 @@ public class Account {
 				out += op + "\n";
 			}
 		} else {
-			for(int i = (extract.size() - 1); i > (extract.size() - number); i--) {
-				out += extract.get(i) + "\n";
+			for(int i = 0; i < extract.size(); i++) {
+				if(i >= (extract.size() - number)) out += extract.get(i) + "\n";
+				else continue;
 			}
 		}
 		

@@ -37,19 +37,15 @@ public class BalanceManager {
 	public List<Operation> getExtract(int qtdOp) {
 		List<Operation> result = new ArrayList<>();
 			
-			for(Operation op : extract) {
-				result.add(op);
-			}
+		for(Operation op : extract) {
+			result.add(op);
+		}
+		
 		if(qtdOp == 0) {
 			return result;
 		} else {
-			result.subList(0, result.size() - qtdOp);
+			result.subList(result.size() - qtdOp, result.size());
 			return result;
 		}
-	}
-	
-	@ Override
-	public String toString() {
-		return "olaaaaa";
 	}
 }

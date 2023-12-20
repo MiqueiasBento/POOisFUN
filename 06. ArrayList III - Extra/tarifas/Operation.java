@@ -33,6 +33,6 @@ public class Operation {
 	@ Override
 	public String toString() {
 		// ·0:··opening:····0:····0
-		return " " + this.index + ":  " + this.label + ":  " + this.value + ":  " + this.balance;
+		return String.format("%2s", this.index) + ":" + String.format("%9s", this.label) + ":" + String.format("%5s", this.value) + ":" + String.format("%5s", this.balance);
 	}
 }

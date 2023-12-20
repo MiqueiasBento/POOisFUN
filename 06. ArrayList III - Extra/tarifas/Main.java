@@ -33,7 +33,14 @@ public class Main {
 					write(account.getExtract(number(args[1])));
 					break;
 				case "reverse":
-					account.reverse(number(args[1]));
+					for(int i = 1; i < args.length; i++) {
+    					try {
+    						account.reverse(number(args[i]));
+    					} catch(Exception e) {
+    						write(e.getMessage());
+    						continue;
+    					}
+    				}
 					break;
 				default:
 					write("fail: comando invalido");
