@@ -14,5 +14,6 @@
 	<classpathentry kind="src" path="12. Herança II"/>
 	<classpathentry kind="src" path="13. Logica II"/>
 	<classpathentry kind="src" path="14. Herança III"/>
+	<classpathentry kind="src" path="07. Troca de dados e ordenação"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
