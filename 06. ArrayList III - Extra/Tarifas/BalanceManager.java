@@ -1,4 +1,4 @@
-package tarifas;
+package Tarifas;
 
 import java.util.ArrayList;
 import java.util.List;

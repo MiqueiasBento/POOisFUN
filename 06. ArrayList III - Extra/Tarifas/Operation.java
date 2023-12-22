@@ -1,4 +1,4 @@
-package tarifas;
+package Tarifas;
 
 public class Operation {
 	private int index;

@@ -1,4 +1,4 @@
-package tarifas;
+package Tarifas;
 
 public enum Label {
 	DEPOSIT,

@@ -1,4 +1,4 @@
-package contato;
+package Contato;
 
 public class Fone {
 	private String id;

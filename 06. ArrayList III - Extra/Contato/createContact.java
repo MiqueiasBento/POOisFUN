@@ -1,4 +1,4 @@
-package contato;
+package Contato;
 
 import java.util.Scanner;
 

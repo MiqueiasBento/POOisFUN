@@ -1,4 +1,4 @@
-package tabuleiro;
+package Tabuleiro;
 
 public class Player {
 	private int label;
