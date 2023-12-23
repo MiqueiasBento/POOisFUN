@@ -40,7 +40,7 @@ public class Main {
 						b.vender(args[1], args[2]);;
 						break;
 					case "vendas":
-						write(b.getVendas();
+						write(b.getVendas());
 						break;
 					default:
 						write("fail: comando invalido");
