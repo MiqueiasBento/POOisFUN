@@ -45,7 +45,7 @@ public class Main {
 				default:
 					println("fail: comando invalido");
 				}
-			} catch (ClientNullException e){
+			} catch (Exception e){
 				write("" + e.getMessage());
 			}
 
