@@ -39,7 +39,7 @@ public class Aluno {
 	
 	@ Override
 	public String toString() {
-		String out = this.id;
+		String out = this.id + " ";
 		
 		if(this.discps.size() == 0) {
 			out += "[]";

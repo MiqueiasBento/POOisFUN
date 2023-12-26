@@ -36,8 +36,8 @@ public class Main {
 						}
 						break;
 					case "rmalu":
-						sistema.rmAluno(args[1]);
-						break;
+					    sistema.rmAluno(args[1]);
+					    break;
 					case "show":
 						write(sistema);
 						break;
